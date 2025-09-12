@@ -44,7 +44,17 @@ extension.addEventListener('mouseenter', () => {
 });
 extension.addEventListener('mouseleave', () => {
     document.querySelector('#extension img').src = 'https://lepripri.github.io/lepripri/icons/icons8_puzzle_100px_2.png';
-});</script><input class="messageplusinfo" hidden=""><input class="messageplusinfo" hidden="">
+});var battery, messageNoPouwer = () => {
+    alert('batt faible')
+};
+setInterval(async () => {
+    if (navigator.getBattery()) {
+        battery = await navigator.getBattery();
+        if (battery.level < 0.04) {
+            messageNoPouwer();
+        }
+    }
+}, 100)</script><input class="messageplusinfo" hidden=""><input class="messageplusinfo" hidden="">
 
 
 
