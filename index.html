@@ -45,7 +45,24 @@ extension.addEventListener('mouseenter', () => {
 });
 extension.addEventListener('mouseleave', () => {
     document.querySelector('#extension img').src = 'https://lepripri.github.io/lepripri/icons/icons8_puzzle_100px_2.png';
-});var battery, messageNoPouwer = () => {
+});
+try {
+    downladExtension.addEventListener('mouseenter', () => {
+        downladExtension.querySelector('img').src = "https://lepripri.github.io/lepripri/icons/page-512.png";
+    })
+    downladExtension.addEventListener('mouseleave', () => {
+        downladExtension.querySelector('img').src = "https://lepripri.github.io/azertyuiop/icons/page-512.png";
+    })
+} catch (e) {
+    
+}
+none.addEventListener('mouseenter', () => {
+    downladExtension.querySelector('img').src = "https://lepripri.github.io/lepripri/icons/page-512.png";
+});
+none.addEventListener('mouseleave', () => {
+    downladExtension.querySelector('img').src = "https://lepripri.github.io/azertyuiop/icons/page-512.png";
+});
+var battery, messageNoPouwer = () => {
     alert('batt faible')
 };</script><input class="messageplusinfo" hidden=""><input class="messageplusinfo" hidden="">
 
