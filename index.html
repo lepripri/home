@@ -63,6 +63,12 @@ none.addEventListener('mouseenter', () => {
 none.addEventListener('mouseleave', () => {
     none.querySelector('img').src = "https://lepripri.github.io/azertyuiop/icons/page-512.png";
 });
+none.onclick = () => {
+    converter.parentElement.style.backgroundColor = 'rgb(255 144 218)';
+    setTimeout(() => {
+        converter.parentElement.style.backgroundColor = ''
+    }, 500);
+}
 downladExtension.addEventListener("click", () => {var closer = () => {dialog.close();dialog.remove();}, dialog = document.createElement("dialog");dialog.innerHTML = '<img src="https://lepripri.github.io/lepripri/icons/Warning.png">le contenu est indisponible';dialog.className = "message";document.body.appendChild(dialog);dialog.showModal();dialog.addEventListener("click", closer);dialog.addEventListener("keydown", closer);document.addEventListener("keydown", closer);setTimeout(closer, 3000)})
 var battery, messageNoPouwer = () => {
     alert('batt faible')
