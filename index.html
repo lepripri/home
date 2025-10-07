@@ -70,7 +70,11 @@ none.onclick = () => {
 downladExtension.addEventListener("click", () => {var closer = () => {dialog.close();dialog.remove();}, dialog = document.createElement("dialog");dialog.innerHTML = '<img src="https://lepripri.github.io/lepripri/icons/Warning.png">le contenu est indisponible';dialog.className = "message";document.body.appendChild(dialog);dialog.showModal();dialog.addEventListener("click", closer);dialog.addEventListener("keydown", closer);document.addEventListener("keydown", closer);setTimeout(closer, 3000)})
 var battery, messageNoPouwer = () => {
     alert('batt faible')
-};games.onmouseenter = () => {games.querySelector('img').src = 'https://lepripri.github.io/lepripri/icons/Game%20Controller_2.png'};
+};
+games.onclick = () => {
+    open('https://lepripri.github.io/games/', '_self');
+}
+games.onmouseenter = () => {games.querySelector('img').src = 'https://lepripri.github.io/lepripri/icons/Game%20Controller_2.png'};
 games.onmouseleave = () => {games.querySelector('img').src = 'https://lepripri.github.io/lepripri/icons/Game%20Controller_1.png'};</script><input class="messageplusinfo" hidden=""><input class="messageplusinfo" hidden="">
 
 
