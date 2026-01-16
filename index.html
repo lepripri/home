@@ -43,6 +43,7 @@ function rederect (url) {
     var redirectionLink = document.body.appendChild(document.createElement('a'));
     redirectionLink.href = url;
     redirectionLink.click();
+    redirectionLink.remove();
 }</script>
     <link rel="manifest" href="https://lepripri.github.io/azertyuiop/manifest.json">
     <link type="image/png" sizes="16x16" rel="icon" href="https://lepripri.github.io/instal/favicon.ico">
